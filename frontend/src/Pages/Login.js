@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     try {
-      const url = "http://localhost:8080/auth/login";
+      const url = "https://deploymernappapi.vercel.app/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
