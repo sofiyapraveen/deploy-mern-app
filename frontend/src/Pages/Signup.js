@@ -1,66 +1,4 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom';
-// import {ToastContainer} from 'react-toastify';
 
-// const Signup = () => {
-//     const [loginInfo, setLoginInfo] = useState({
-//         name: '',
-//         email: '',
-//         password: ''
-//     })
-//     const handleChange=(e)=>{
-//         const { name , value }= e.target;
-//         console.log(name,value);
-//     }
-//   return (
-//     <div className='container'>
-//         <h1>Login</h1>
-//         <form>
-//             <div>
-//                 <label htmlFor='name'>Name</label>
-//                 <input
-//                  onChange={handleChange}
-//                 type='text'
-//                 name='name'
-//                 autoFocus
-//                 placeholder='Enter your name...'
-            
-//                 />
-//             </div>
-//             <div>
-//                 <label htmlFor='email'>Email</label>
-//                 <input
-                
-//                 onChange={handleChange}
-//                 type='email'
-//                 name='email'
-//                 autoFocus
-//                 placeholder='Enter your email...'
-            
-//                 />
-//             </div>
-//             <div>
-//                 <label htmlFor='password'>Password</label>
-//                 <input 
-//                 onChange={handleChange}
-//                 type='password'
-//                 name='pardword'
-//                 placeholder='Enter your password...'
-            
-//                 />
-//             </div>
-//             <button>Signup</button>
-//             <span>already have an account ?
-//                 <Link to="/login">Login</Link>
-//             </span>
-//         </form>
-//         <ToastContainer />
-      
-//     </div>
-//   )
-// }
-
-// export default Signup;
 
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -94,7 +32,7 @@ const Signup = () => {
       return handleError('name, email, password are required')  
     }
     try{
-        const url= "http://localhost:8080/auth/signup";
+        const url= "https://deploymernappapi.vercel.app/auth/signup";
         const response=await fetch(url,{
             method: "POST",
             headers: {
